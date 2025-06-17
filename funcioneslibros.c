@@ -117,7 +117,7 @@ void buscar_libro(Biblioteca *biblioteca) {
     }
 
     int opcion;
-    printf("\n🔍 BUSCAR LIBRO\n");
+    printf("\nBUSCAR LIBRO\n");
     printf("1. Buscar por ID\n");
     printf("2. Buscar por titulo\n");
     printf("Seleccione una opcion: ");
@@ -141,13 +141,11 @@ void buscar_libro(Biblioteca *biblioteca) {
         for (int i = 0; i < biblioteca->total_libros; i++) {
             if (biblioteca->libros[i].id == id_buscar) {
                 printf("\nLIBRO ENCONTRADO:\n");
-                printf("=====================================\n");
                 printf("ID: %d\n", biblioteca->libros[i].id);
                 printf("Titulo: %s\n", biblioteca->libros[i].titulo);
                 printf("Autor: %s\n", biblioteca->libros[i].autor);
                 printf("Anio: %d\n", biblioteca->libros[i].anio_publicacion);
                 printf("Estado: %s\n", biblioteca->libros[i].estado);
-                printf("=====================================\n");
                 encontrado = 1;
                 break;
             }
